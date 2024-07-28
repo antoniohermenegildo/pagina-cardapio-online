@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- links para importação da funcionalidade do Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <!-- links para importação da fonte roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet"/>    
+    
+    <!-- link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Dev Burguer - A melhor hamburgueria Dev</title>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/hamb-1.png"
+          alt="Logo DevBurguer"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-5xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
+        <span class="text-white font-medium">Rua dev 10, Maceió - AL</span>
+        <div 
+          class="px-4 py-1 rounded-lg mt-5" 
+          id="hora-funcionamento"
+        >
+          <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+        </div>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho -->
+
+    <!-- Corpo da pagina -->
+    <h2 class="text-3xl md:text-4lx text-center font-bold mt-9 mb-6">
+      Conheça nosso menu
+    </h2>
+
+    <!-- Menu -->
+    <main id="menu">
+      <!-- Seção Hamburguers -->
+      <h3 class="text-2xl md:text-3lx font-bold mt-9 mb-9 px-10">
+        Nossos Hamburguers
+      </h3>
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <!-- Produto Item 1-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-1.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Smash</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Smash"
+                data-price="29.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 1 -->
+        <!-- Produto Item 2-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-2.png"
+            alt="Hamburguer Bacon"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Bacon</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, baicon, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 32.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Bacon"
+                data-price="32.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 2-->
+        <!-- Produto Item 3-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-3.png"
+            alt="Hamburguer"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 25.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer"
+                data-price="25.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 3 -->
+        <!-- Produto Item 4-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-4.png"
+            alt="Hamburguer Salad"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Salad</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, salada, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 30.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Salad"
+                data-price="30.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 4-->
+        <!-- Produto Item 5-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-5.png"
+            alt="Hamburguer Smash Salad"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Smash Salad</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 35.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Smash Salad"
+                data-price="35.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 5 -->
+        <!-- Produto Item 6-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-6.png"
+            alt="Hamburguer Salad Turbo"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Salad Turbo</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, baicon, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 38.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Salad Turbo"
+                data-price="38.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 6-->
+        <!-- Produto Item 7-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-7.png"
+            alt="Hamburguer Smash Onion"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Smash Onion</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 40.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Smash Onion"
+                data-price="40.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 7 -->
+        <!-- Produto Item 8-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-8.png"
+            alt="Hamburguer Mega Salad"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Mega Salad</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burguer 160g, salada, queijo
+              prato e maionese da casa.
+            </p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 31.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Mega Salad"
+                data-price="31.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 8-->
+      </section>
+      <!-- Fim Seção Hamburguers -->
+
+      <!-- Seção Bebidas -->
+      <h3 class="text-2xl md:text-3lx font-bold mt-9 mb-9 px-10">
+        Nossas Bebidas
+      </h3>
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <!-- Produto Item 1-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="./assets/refri-1.png"
+            alt="Coca-cola"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-full">
+            <p class="font-bold">Coca-cola</p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 5.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Coca-cola"
+                data-price="5.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 1 -->
+        <!-- Produto Item 2-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="./assets/refri-2.png"
+            alt="Guaraná"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-full">
+            <p class="font-bold">Guaraná</p>
+            <div class="flex gap-2 items-center justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.90</p>
+              <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Guarana"
+                data-price="4.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto Item 2-->
+      </section>
+      <!-- Fim Seção Bebidas -->
+    </main>
+    <!-- Fim Menu -->
+
+    <!-- Modal Cart -->
+    <div 
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden justify-center items-center"
+      id="carrinho-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        <p class="font-bold mt-4">Endereço de entrega:</p>
+        <input 
+          type="text"
+          placeholder="Digite seu endereço completo..."
+          id="endereco"
+          class="w-full border-2 p-1 rounded my-1"
+        >
+        <p class="text-red-500 hidden" id="endereco-erro">Informe seu enderço completo!</p>
+        <div class="flex justify-between items-center mt-5 w-full">
+          <button id="fechar-modal-btn" class="px-4 py-1 border-2 rounded">Fechar</button>
+          <button id="finalizar-pedido-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Modal Cart -->
+
+
+    <!-- Botão Carrinho Rodapé -->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex justify-center items-center">
+      <button 
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>)
+        Veja meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>    
+    <!-- Fim Botão Carrinho Rodapé -->
+
+    <!-- Fim Corpo da pagina -->
+
+    <!-- Script para usar os ícones do site fontawesome -->
+    <script src="https://kit.fontawesome.com/4851cecdfa.js" crossorigin="anonymous"></script>
+
+    <!-- Script para usar as funcionalidades da biblioteca do Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Meu Script com as funcionalidades da Pagina -->
+    <script src="./script.js"></script>
+  </body>
+</html>
